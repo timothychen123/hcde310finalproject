@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+  <title>My Form</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+<form action="gresponse" method="post" id="enter">
+    <label for="artist">Please enter an artist:</label>
+    <input type="text" id="artist" name="artist" /><br />
+    <input type="submit" value="Search" name="gobutton" class="button"/></form>
+<img src="{{ url_for('static', filename='music.jpeg') }}" alt="musical notes" />
+</body>
+</html>

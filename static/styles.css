@@ -1,0 +1,54 @@
+.artist {
+  font-size: 24px;
+}
+
+.information {
+  font-size: 14px;
+  text-indent: 20px;
+}
+
+.horiline {
+  width: 97%;
+}
+
+.button {
+  background-color:salmon;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius:6px;
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  border:none;
+  text-align:center;
+  margin: 0 auto;
+}
+
+.button:hover {
+  border: none;
+  background:lightcyan;
+  color: black;
+  box-shadow: 0px 0px 1px #777;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+form {
+  margin: 0 auto;
+  width: 300px
+}
+
+#returntext {
+  font-size:16px
+}
+
+#response {
+  background-color: lightyellow;
+}
