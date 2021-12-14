@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <head>
-  <title>My Form</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+    <title>iTunes Artist Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body>
-  <h2 class="center">Context:<h4 class="center">Enter an artist's name to find the average
+    <h2 class="center">This project:<h4 class="center">Enter an artist's name to find the average
     price of an album from the unique albums that appear in the first 30 searches.
     Along with that you can also see each album that appears in the searches and more information
     about each one.
-  </h4></h2>
-  <form action="gresponse" method="post" id="enter">
+    </h4></h2>
+    <form action="gresponse" method="post" id="enter">
       <label for="artist">Please enter an artist:</label>
       <input type="text" id="artist" name="artist" /><br />
       <input type="submit" value="Search" name="gobutton" class="button"/></form>
-  <img src="{{ url_for('static', filename='music.jpeg') }}" alt="musical notes" />
+  <img class="centerimg" src="{{ url_for('static', filename='music.jpeg') }}" alt="musical notes" />
 </body>
 </html>

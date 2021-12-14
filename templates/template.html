@@ -14,13 +14,16 @@
     </div>
   {% endfor %}
   <p id="heading3">
-    <em>These are the album information results which show in order: album name, album url, album cover url, and the release date.</em>
+    <em>These are the album information results which show in order: album name, album url, album price, album cover url, and the release date.</em>
   </p>
+  <hr class="horiline">
   {% for album in more_info %}
     <div class ='information'>
+      <img class="albumimg" src= {{more_info[album]["Artwork URL"]}} alt="Album Image">
       <p>Album Name: {{more_info[album]["Album Name"]}}</p>
       <p>Album URL: <a href={{more_info[album]["Album URL"]}} target="_blank">{{more_info[album]["Album URL"]}}</a></p>
-      <p>Album URL: <a href={{more_info[album]["Artwork URL"]}} target="_blank">{{more_info[album]["Artwork URL"]}}</a></p>
+      <p>Album Price: ${{more_info[album]["Album Price"]}}</p>
+      <p>Artwork URL: <a href={{more_info[album]["Artwork URL"]}} target="_blank">{{more_info[album]["Artwork URL"]}}</a></p>
       <p>Release Date: {{more_info[album]["Release Date"]}}</p>
       <hr class="horiline">
     </div>

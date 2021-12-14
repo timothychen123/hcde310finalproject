@@ -65,12 +65,9 @@ def more_album_info(name, limit=30):
         uniqueAlbums[albumName] = {}
         uniqueAlbums[albumName]["Album Name"] = album["collectionCensoredName"]
         uniqueAlbums[albumName]["Album URL"] = album["collectionViewUrl"]
+        uniqueAlbums[albumName]["Album Price"] = album["collectionPrice"]
         uniqueAlbums[albumName]["Artwork URL"] = album["artworkUrl100"]
         uniqueAlbums[albumName]["Release Date"] = album["releaseDate"].split("T")[0]
-#        uniqueAlbum[albumName + " Album Name"] = album["collectionCensoredName"]
-#        uniqueAlbum[albumName + " Album URL"] = album["collectionViewUrl"]
-#        uniqueAlbum[albumName + " Artwork URL"] = album["artworkUrl100"]
-#        uniqueAlbum[albumName + " Release Date"] = album["releaseDate"].split("T")[0]
   return uniqueAlbums
 
 @app.route("/")
