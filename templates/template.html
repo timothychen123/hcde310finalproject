@@ -4,6 +4,9 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body id="response">
+  <form action="gresponse" method="post">
+    <label for="artist" id="returntext">Want to search for more artists?</label>
+    <input type="submit" value="More" name="gobutton" class="button"/></form>
   <h1>Here are the album results from the top 30 searches:</h1>
   {% for key,value in artist_album.items() %}
     <div class ='artist'>
