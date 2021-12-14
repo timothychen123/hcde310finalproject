@@ -52,3 +52,18 @@ form {
 #response {
   background-color: lightyellow;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+}
+
+#enter {
+  padding: 30px;
+}
+
+#heading3 {
+  padding: 15px;
+  font-size: 18px;
+}

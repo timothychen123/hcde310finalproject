@@ -9,23 +9,21 @@
     <div class ='artist'>
       <p>
         Average price of albums for
-        {{key}}: ${{value}}
+        <b>{{key}}: ${{value}}</b>
       </p>
     </div>
   {% endfor %}
-  {% for key,value in more_info.items() %}
+  <p id="heading3">
+    <em>These are the album information results which show in order: album name, album url, album cover url, and the release date.</em>
+  </p>
+  {% for album in more_info %}
     <div class ='information'>
-      {% if "https" in value %}
-        <p>
-          {{key}}: <a href={{value}} target="_blank">{{value}}</a>
-        </p>
-      {% else %}
-        <p>
-          {{key}}: {{value}}
-        </p>
+      <p>Album Name: {{more_info[album]["Album Name"]}}</p>
+      <p>Album URL: <a href={{more_info[album]["Album URL"]}} target="_blank">{{more_info[album]["Album URL"]}}</a></p>
+      <p>Album URL: <a href={{more_info[album]["Artwork URL"]}} target="_blank">{{more_info[album]["Artwork URL"]}}</a></p>
+      <p>Release Date: {{more_info[album]["Release Date"]}}</p>
+      <hr class="horiline">
     </div>
-    <hr class="horiline">
-    {% endif %}
   {% endfor %}
   <form action="gresponse" method="post">
     <label for="artist" id="returntext">Want to search for more artists?</label>

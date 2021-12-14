@@ -58,16 +58,20 @@ def more_album_info(name, limit=30):
       quit()
   result = safeGet(request_artist)
   if result is not None:
-    uniqueAlbum = {}
+    uniqueAlbums = {}
     for album in request_artiststr["results"]:
-      print(album)
       albumName = album["collectionName"]
-      if albumName not in uniqueAlbum:
-        uniqueAlbum[albumName + " Album Name"] = album["collectionCensoredName"]
-        uniqueAlbum[albumName + " Album URL"] = album["collectionViewUrl"]
-        uniqueAlbum[albumName + " Artwork URL"] = album["artworkUrl100"]
-        uniqueAlbum[albumName + " Release Date"] = album["releaseDate"].split("T")[0]
-  return uniqueAlbum
+      if albumName not in uniqueAlbums:
+        uniqueAlbums[albumName] = {}
+        uniqueAlbums[albumName]["Album Name"] = album["collectionCensoredName"]
+        uniqueAlbums[albumName]["Album URL"] = album["collectionViewUrl"]
+        uniqueAlbums[albumName]["Artwork URL"] = album["artworkUrl100"]
+        uniqueAlbums[albumName]["Release Date"] = album["releaseDate"].split("T")[0]
+#        uniqueAlbum[albumName + " Album Name"] = album["collectionCensoredName"]
+#        uniqueAlbum[albumName + " Album URL"] = album["collectionViewUrl"]
+#        uniqueAlbum[albumName + " Artwork URL"] = album["artworkUrl100"]
+#        uniqueAlbum[albumName + " Release Date"] = album["releaseDate"].split("T")[0]
+  return uniqueAlbums
 
 @app.route("/")
 def main_handler():
